@@ -1,0 +1,125 @@
+.pagination {
+  margin-bottom: 60px;
+  user-select: none;
+}
+
+@media screen and (max-width: 640px) {
+  .pagination {
+    margin-bottom: 40px;
+    /* user-select: none; дублирование стилей */
+  }
+}
+
+.paginator {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn-page1,
+.btn-page2,
+.btn-page3,
+.btn-page4,
+.btn-page5,
+.btn-first,
+.btn-last {
+  width: 40px;
+  height: 40px;
+  background: #f7f7f700;
+  color: #000;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.btn-page {
+  width: 40px;
+  height: 40px;
+  background: #f7f7f7;
+  color: #000;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.btn-dots {
+  background-color: #f7f7f700;
+  border: 0px;
+  cursor: pointer;
+  color: #000;
+  outline: none;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 16px;
+}
+
+.btn-dots:hover {
+  transition: 0.1s;
+  color: #ff6b08;
+  font-size: 14px;
+  font-weight: 800;
+}
+
+@media screen and (max-width: 640px) {
+  .btn-page1,
+  .btn-page2,
+  .btn-page3,
+  .btn-page4,
+  .btn-page5,
+  .btn-page,
+  .btn-first,
+  .btn-last {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+.btn-page1,
+.btn-page2,
+.btn-page3,
+.btn-page4,
+.btn-page5,
+.btn-first,
+.btn-last,
+.btn-page:not(:last-child) {
+  margin-right: 10px;
+}
+
+.btn-page1:hover,
+.btn-page2:hover,
+.btn-page3:hover,
+.btn-page4:hover,
+.btn-page5:hover,
+.btn-first:hover,
+.btn-last:hover,
+.btn-page:hover {
+  outline: none;
+  transition: 0.3s;
+  background: #ff6b01;
+  border: 1px solid #ff6b01;
+  box-shadow: inset 5px 5px 10px rgb(255, 166, 124), 1px 1px 5px rgb(221, 9, 9);
+  transform: scale(1.07);
+}
+
+.btn-dots {
+  width: 30px;
+  height: 27px;
+  vertical-align: middle;
+  margin-right: 6px;
+}
+
+@media screen and (max-width: 640px) {
+  .btn-dots {
+    display: none;
+  }
+}
+
+.active {
+  background: #ff6b01;
+  border: 1px solid #ff6b01;
+  box-shadow: inset 5px 5px 10px rgb(255, 166, 124), 1px 1px 5px rgb(221, 9, 9);
+  color: #ffff;
+}

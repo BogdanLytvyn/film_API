@@ -1,0 +1,454 @@
+:root {
+  --timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  --animation-duration: 250ms;
+}
+
+/* * ------------- modal-window ---------------- */
+
+.modal {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+
+.is-hidden {
+  display: none;
+  pointer-events: none;
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 300vh;
+  width: 100vw;
+  background-color: rgba(0, 0, 0, 0.8);
+  transition: opacity var(--animation-duration) var(--timing-function);
+}
+
+.modal-content {
+  font-family: Roboto;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 16px;
+  color: #000000;
+
+  padding-top: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  pointer-events: initial;
+
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -30%);
+
+  background-color: white;
+  z-index: 2;
+  transition: opacity var(--animation-duration) var(--timing-function);
+
+  width: min-content;
+
+  height: min-content;
+  border-radius: 7px;
+}
+
+/* ! --------- MODAL BUTTON --------- */
+.modal-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 3px;
+  right: 2px;
+
+  width: 15px;
+  height: 15px;
+  padding: 0;
+  margin: 0;
+  border: none;
+  border-radius: 50%;
+
+  background-color: transparent;
+  color: #fff;
+  fill: #ff6b08;
+
+  cursor: pointer;
+  transition: background-color var(--animation-duration) var(--timing-function);
+  outline: none;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 60%;
+
+  z-index: 4;
+}
+
+.modal-button:hover {
+  background: #ff6b01;
+  border: 1px solid #ff6b01;
+  box-shadow: inset 5px 5px 10px rgb(255, 166, 124), 1px 1px 5px rgb(221, 9, 9);
+  /* background-color: #ff6b08;
+  border: 3px solid #ff6b08; */
+  fill: #fff;
+}
+
+.film-info-trailer {
+  padding: 0;
+}
+
+.film-info-data.genre {
+  vertical-align: top;
+}
+
+/* ! --------- SOCIAL --------- */
+
+.film-info-social {
+  display: flex;
+  padding: 8px 3px 7px 8px;
+}
+
+a.fb-btn {
+  box-sizing: border-box;
+  display: block;
+  background-color: #3b5b9b;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  border-radius: 5px;
+  overflow: hidden;
+  line-height: 0;
+  padding: 3px 2px 0 2px;
+  height: 28px;
+  width: 40px;
+  text-decoration: none;
+  text-align: center;
+  margin-right: 7px;
+}
+a.fb-btn:hover {
+  transform: scale(1.2);
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 250ms;
+}
+
+span.fb-icon {
+  box-sizing: border-box;
+  background: url(../../images/modal-window/facebook.svg) no-repeat 0 0;
+  width: 19px;
+  height: 22px;
+  display: inline-block;
+  vertical-align: middle;
+  fill: #afb1b8;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+a.tgme-btn {
+  box-sizing: border-box;
+  display: block;
+  background-color: #54a9eb;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  border-radius: 5px;
+  overflow: hidden;
+  line-height: 0;
+  padding: 0 2px 0 2px;
+  height: 28px;
+  width: 40px;
+  text-decoration: none;
+  text-align: center;
+  margin-right: 7px;
+}
+a.tgme-btn:hover {
+  transform: scale(1.2);
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 250ms;
+}
+
+span.tgme-icon {
+  box-sizing: border-box;
+  background: url(../../images/modal-window/telegram5.svg) no-repeat 0 0;
+  width: 28px;
+  height: 28px;
+  line-height: 28px;
+  display: inline-block;
+  vertical-align: middle;
+  fill: #afb1b8;
+}
+
+a.whatsapp-btn {
+  box-sizing: border-box;
+  display: block;
+  background-color: #26d365;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  border-radius: 5px;
+  overflow: hidden;
+  line-height: 0;
+  padding: 0 2px 0 2px;
+  height: 28px;
+  width: 40px;
+  text-decoration: none;
+  text-align: center;
+  margin-right: 5px;
+}
+a.whatsapp-btn:hover {
+  transform: scale(1.2);
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 250ms;
+}
+
+span.whatsapp-icon {
+  box-sizing: border-box;
+  background: url(../../images/modal-window/whatsapp.svg) no-repeat 0 0;
+  width: 28px;
+  height: 28px;
+  line-height: 28px;
+  display: inline-block;
+  vertical-align: middle;
+  fill: #afb1b8;
+}
+
+/* ! --------- End of SOCIAL --------- */
+
+.poster {
+  width: 280px;
+  height: 416px;
+  border-radius: 5px;
+  outline: none;
+  border: none;
+  margin-bottom: 30px;
+}
+
+.film-data {
+  text-align: left;
+}
+
+.film-title {
+  font-size: 20px;
+  line-height: 23px;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
+/* ! --------- TABLE --------- */
+
+table {
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+table td {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 3px;
+  /* border: 1px solid #2a2a2a; */
+}
+
+#col1 {
+  width: 100px;
+}
+
+#col2 {
+  width: 180px;
+}
+
+.vote-average {
+  width: 36px;
+  height: 16px;
+  background: #ff6b08;
+  color: #ffff;
+  border-radius: 5px;
+  outline: none;
+  border: none;
+  padding: 1px 10px;
+}
+
+.vote-average-none {
+  width: 36px;
+  height: 16px;
+  background: #8c8c8c;
+  color: #ffff;
+  border-radius: 5px;
+  outline: none;
+  border: none;
+  padding: 1px 10px;
+}
+
+.vote,
+.pop,
+.orig,
+.genre {
+  color: #8c8c8c;
+}
+/* ! --------- End of TABLE --------- */
+
+.original-title {
+  text-transform: uppercase;
+}
+
+.film-about {
+  margin-bottom: 40px;
+}
+
+.film-about-title {
+  margin-bottom: 10px;
+  height: 16px;
+  text-transform: uppercase;
+}
+
+.film-about-text {
+  width: 279px;
+  line-height: 20px;
+}
+
+.user-action-buttons {
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 40px;
+}
+
+.buttons {
+  width: 136px;
+  height: 44px;
+  background: #ffff;
+  border-radius: 5px;
+  border: 1px solid black;
+  outline: none;
+  text-transform: uppercase;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.buttons:hover {
+  border: 1px solid #ff6b01;
+  box-shadow: inset 1px 1px 10px rgb(255, 166, 124), 1px 1px 5px rgb(221, 9, 9);
+  outline: none;
+  cursor: pointer;
+}
+
+.action-watch {
+  margin-right: 15px;
+}
+
+.active {
+  background: #ff6b08;
+  color: #ffff;
+  outline: none;
+  border: none;
+}
+
+.film-info-data-genre {
+  color: black;
+  margin-bottom: 2px;
+  display: block;
+}
+
+.genre {
+  vertical-align: top;
+}
+/* !  ------------------TABLET ver.------------------ */
+@media screen and (min-width: 768px) and (max-width: 1200px) {
+  .modal-content {
+    padding-top: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    flex-wrap: nowrap;
+    justify-content: center;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: min-content;
+    z-index: 2;
+  }
+  .modal-button {
+    top: 7px;
+    right: 7px;
+    width: 20px;
+    height: 20px;
+  }
+  .poster {
+    width: 294px;
+    height: 416px;
+    margin-right: 30px;
+  }
+
+  #col1 {
+    width: 120px;
+  }
+  #col2 {
+    width: 200px;
+  }
+
+  .film-title {
+    font-size: 30px;
+    line-height: 35px;
+  }
+
+  .film-about {
+    margin-bottom: 20px;
+  }
+
+  .film-about-text {
+    width: 294px;
+  }
+}
+
+/* ! ------------------DESKTOP ver.------------------ */
+@media screen and (min-width: 1200px) {
+  .modal-content {
+    padding-top: 30px;
+    padding-left: 30px;
+    padding-right: 30px;
+    flex-wrap: nowrap;
+    justify-content: center;
+
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    width: min-content;
+    z-index: 2;
+  }
+
+  .modal-button {
+    top: 7px;
+    right: 7px;
+
+    width: 24px;
+    height: 24px;
+  }
+
+  .poster {
+    width: 426px;
+    height: 514px;
+    margin-right: 30px;
+    object-fit: cover;
+  }
+
+  #col1 {
+    width: 150px;
+  }
+  #col2 {
+    width: 230px;
+  }
+  .film-title {
+    font-size: 30px;
+    line-height: 35px;
+  }
+
+  .film-about {
+    margin-bottom: 20px;
+  }
+
+  .film-about-text {
+    width: 426px;
+  }
+
+  .user-action-buttons {
+    display: flex;
+    justify-content: flex-start;
+  }
+}

@@ -1,0 +1,19 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@import "./components/header/header.css";
+@import "./components/modal-window/modal-window.css";
+@import "./components/main-section/main-section.css";
+@import "./components/spinner/spinner.css";
+@import "./components/trailer/trailer.css";
+@import "./components/pagination/pagination.css";
+@import "./components/footer/footer.css";
+@import "./components/theme-switch/theme-switch.css";
+@import "./components/up-to/up-to.css";
+@import "./components/film-overlay/film-overlay.css";
+@import "./components/team-modal/team-modal.css";
