@@ -15,7 +15,7 @@ import "./js/buttons-movie";
 import "./js/theme-switch.js";
 import "./js/up-to.js";
 import "./js/team-modal.js";
-
+import "./js/tral2.js"
 export let genres = [];
 
 let lang = localStorage.getItem("lang");
