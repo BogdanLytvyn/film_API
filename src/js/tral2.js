@@ -1,4 +1,5 @@
- // 2. This code loads the IFrame Player API code asynchronously.
+const pl = document.querySelector("#player")
+// 2. This code loads the IFrame Player API code asynchronously.
       var tag = document.createElement('script');
 
       tag.src = "https://www.youtube.com/iframe_api";

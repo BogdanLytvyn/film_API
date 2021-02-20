@@ -15,7 +15,7 @@ function fetchUrl(movieID) {
         `<div class="trailer-iframe">
       <iframe class ="trailer"
       type="text/html"
-      src="http://www.youtube.com/embed/${youtubeKey}?color=red&modestbranding=1" 
+      src="https://www.youtube.com/embed/${youtubeKey}?color=red&modestbranding=1" 
       frameborder="0"
       allow="accelerometer; picture-in-picture; autoplay"
       allowfullscreen
