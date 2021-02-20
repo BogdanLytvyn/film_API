@@ -147,64 +147,8 @@
     </section>
 
     <div class="pagination container">
-      <!-- <div class="paginator">
-        <button class="btn-page prev" data-index="1">&larr;</button>
-        <button class="btn-first btn" data-index="1">1</button>
-        <button class="btn-dots dots1" data-index="1">...</button>
-        <button class="btn-page1 active btn" data-index="1">1</button>
-        <button class="btn-page2 btn" data-index="2">2</button>
-        <button class="btn-page3 btn" data-index="3">3</button>
-        <button class="btn-page4 btn" data-index="4">4</button>
-        <button class="btn-page5 btn" data-index="5">5</button>
-        <button class="btn-dots dots2" data-index="1">...</button>
-        <button class="btn-last btn" data-index="1000">1000</button>
-        <button class="btn-page next" data-index="1">&rarr;</button>
-      </div> -->
     </div>
-    <div id="player"></div>
-    <script>
-      // 2. This code loads the IFrame Player API code asynchronously.
-      var tag = document.createElement('script');
-      console.log(tag);
-      tag.src = "https://www.youtube.com/iframe_api";
-      var firstScriptTag = document.getElementsByTagName('script')[0];
-      firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
-
-      // 3. This function creates an <iframe> (and YouTube player)
-      //    after the API code downloads.
-      var player;
-      function onYouTubeIframeAPIReady() {
-        player = new YT.Player('player', {
-          height: '360',
-          width: '640',
-          videoId: 'M7lc1UVf-VE',
-          events: {
-            'onReady': onPlayerReady,
-            'onStateChange': onPlayerStateChange
-          }
-        });
-      }
-
-      // 4. The API will call this function when the video player is ready.
-      function onPlayerReady(event) {
-        event.target.playVideo();
-      }
-
-      // 5. The API calls this function when the player's state changes.
-      //    The function indicates that when playing a video (state=1),
-      //    the player should play for six seconds and then stop.
-      var done = false;
-      function onPlayerStateChange(event) {
-        if (event.data == YT.PlayerState.PLAYING && !done) {
-          setTimeout(stopVideo, 6000);
-          done = true;
-        }
-      }
-      function stopVideo() {
-        player.stopVideo();
-      }
-    </script>
-    <div id="spinner"></div>
+        <div id="spinner"></div>
     <div class="trailer-box"></div>
     <div class="to-up">
       <svg class="up-to-svg">
