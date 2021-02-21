@@ -35,6 +35,14 @@ function onOpenModal(event) {
         lang = lang === "ru-RU" ? false : true;        
         modalMarkup({ ...data, lang });
         playTrailer();
+        const iconPlay = document.querySelector(".trailer-box-svg-on");
+        const iconPlayBtn = document.querySelector(".trailer-svg");
+        iconPlay.insertAdjacentHTML("beforeend",
+          `<use href="../images/symbol-defs.svg#icon-play3"></use>`);
+        iconPlayBtn.insertAdjacentHTML("beforeend",
+          `<use href="../images/symbol-defs.svg#icon-play3"></use>`);
+        
+        console.log(iconPlay);
       })
       .catch((err) => console.log(err));
   }
@@ -190,4 +198,6 @@ export function checkFilm(filmArr, film) {
   if (!filmArr) return false;
 
   return filmArr.find((item) => item.id === film.id);
+
 }
+ 
