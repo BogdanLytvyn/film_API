@@ -41,8 +41,7 @@ function onOpenModal(event) {
           `<use href="../images/symbol-defs.svg#icon-play3"></use>`);
         iconPlayBtn.insertAdjacentHTML("beforeend",
           `<use href="../images/symbol-defs.svg#icon-play3"></use>`);
-        
-        console.log(iconPlay);
+          
       })
       .catch((err) => console.log(err));
   }
